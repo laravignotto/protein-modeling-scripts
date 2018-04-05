@@ -24,7 +24,7 @@ class ChainNames:
 		# requests.get retrieves the web page with the data, parses 
 		# it using the html module and saves the results in tree
 		print 'requesting...'
-		page = requests.get('https://www.rcsb.org/pdb/explore/remediatedSequence.do?structureId=' + self.structure_id + '&params.chainsPerPage=100')
+		page = requests.get('https://www.rcsb.org/pdb/explore/remediatedSequence.do?structureId=' + self.structure_id + '&params.chainEntityStrategyStr=all&params.chainsPerPage=100')
 		print '...done'
 		tree = html.fromstring(page.content)
 
